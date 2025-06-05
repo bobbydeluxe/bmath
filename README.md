@@ -37,7 +37,6 @@ BMath.E; // euler's number. around 2.718281828459
 - math.log() is only natural log (ln), but `BMath.log(v, base)` exists here. now you can have base 2 or base 10 or base whatever.
 - sin/cos/tan etc. are restated. they're still radians, but you can use `toRadians` to pass degrees if u want
 - 4th root? 5th root? just use fractional exponentiation for anything above `cbrt`.
-- i don't include advanced stuff like clamp rn... too lazy lol just use haxeflixel's math or some shi i aint writin a whole cas
 
 ## faq
 

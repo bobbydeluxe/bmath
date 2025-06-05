@@ -170,14 +170,12 @@ class BMath {
         else return 0;
     }
 
-    // Returns the factorial of a non-negative integer n
-    public static function factorial(n:Int):Int {
-        var result = 1;
-        for (i in 2...n + 1) {
-            result *= i;
-        }
-        return result;
+    // Returns the nearest integer to a number, rounding halfway cases away from zero
+    public static function round(value:Float):Int {
+        return Math.round(value);
     }
+
+    // MORE COMPLICATED MISC STUFF
 
     // Clamps a value between a minimum and maximum range
     public static function clamp(value:Float, min:Float, max:Float):Float {
@@ -194,9 +192,13 @@ class BMath {
         return start + (end - start) * t;
     }
 
-    // Returns the nearest integer to a number, rounding halfway cases away from zero
-    public static function round(value:Float):Int {
-        return Math.round(value);
+    // Returns the factorial of a non-negative integer n
+    public static function factorial(n:Int):Int {
+        var result = 1;
+        for (i in 2...n + 1) {
+            result *= i;
+        }
+        return result;
     }
 
     // wrap

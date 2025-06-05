@@ -3,7 +3,7 @@
   "url": "https://github.com/bobbydeluxe/bmath",
   "license": "MIT",
   "tags": ["math", "utils", "algebra", "haxe", "lightweight"],
-  "description": "tiny haxe lib of math functions and constants for algebra and sanity",
+  "description": "tiny haxe library of math functions and constants for algebra and my sanity as an amateur mathematician",
   "version": "0.1.0",
   "releasenote": "just a haxe math extension. includes base constants, trig/pow/log with base, radians-degrees, and chill vibes",
   "contributors": ["bobbyDX"]

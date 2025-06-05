@@ -98,7 +98,7 @@ class BMath {
             case "asec": return Math.acos(1 / angle); // arcsecant
             case "acot": return Math.atan(1 / angle); // arccotangent
 
-            default: throw "Invalid trigonometric function type: " + type;
+            default: throw "Bro. Invalid trigonometric function type: " + type;
         }
     }
 

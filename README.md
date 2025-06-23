@@ -2,6 +2,8 @@
 
 a haxe math revamp so i don't have to search degrees to radians and everything
 
+**this is going to be part of a bigger utils collection [codenamed sophistry idk] so bmath in this state might be outdated**
+
 this is a tiny haxelib with math shortcuts for haxe. it wraps/repeats stuff from haxe's base `Math` class but makes it easier for me to remember and use. good for algebraic expressions, constants, and just not cluttering up code with tons of `Math.` everywhere.
 
 ## install

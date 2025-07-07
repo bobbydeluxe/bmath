@@ -1,0 +1,19 @@
+{
+    "name": "bmath",
+    "version": "1.0.0",
+    "description": "a simple math library for a rewritten mathematical workflow. comes with a math manager that can do a lot of cool stuff. oh and complex number support.",
+    "license": "MIT",
+    "tags": [
+        "math",
+        "complex",
+        "numbers",
+        "manager",
+        "utility"
+    ],
+    "contributors": [
+        "BobbyDX"
+    ],
+    "releasenote": "initial release of bmath. nothing special.",
+    "classPath": "src",
+    "url": "https://github.com/bobbydeluxe/bmath"
+}

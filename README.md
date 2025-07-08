@@ -2,6 +2,8 @@
 
 a math library for haxe. because the built-in one is kinda mid.
 
+**HEAVY WIP, DONT EXPECT ANYTHING TO WORK**
+
 includes stuff like:
 - better trigonometry
 - clamping, lerping, mapping

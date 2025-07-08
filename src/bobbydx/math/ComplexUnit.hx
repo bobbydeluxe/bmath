@@ -73,8 +73,8 @@ abstract ComplexUnit({
 	 * Multiplies two complex numbers.
 	 */
 	@:op(A * B)
-	public inline function mult(rhs:Complex):Complex
-		return new Complex(
+	public inline function mult(rhs:ComplexUnit):ComplexUnit
+		return new ComplexUnit(
 			this.real * rhs.real - this.imag * rhs.imag,
 			this.real * rhs.imag + this.imag * rhs.real
 		);

@@ -156,7 +156,7 @@ abstract ComplexUnit({
 	 */
 	public static inline function toString(num:ComplexUnit):String {
 		var imaginarySign = (num.imag < 0) ? '' : '+';
-		return '${num.real}${imaginarySign}${num.imag}i'
+		return '${num.real}${imaginarySign}${num.imag}i';
 	}
 	
 	/**

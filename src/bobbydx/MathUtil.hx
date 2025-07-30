@@ -23,19 +23,19 @@ class MathUtil
 {
     // --- CONSTANTS ---
     // Common mathematical constants.
-    public static inline var PI = Math.PI;
-    public static inline var E = Math.exp(1); // Euler's number
-    public static inline var PHI = (1 + Math.sqrt(5)) / 2; // Golden ratio
-    public static inline var GAMMA = 0.57721566490153286060; // Euler–Mascheroni constant
-    public static inline var EPSILON = 1e-10; // For floating-point tolerance comparisons
-    public static inline var NaN = Math.NaN;
-    public static inline var POSITIVE_INFINITY = Math.POSITIVE_INFINITY;
-    public static inline var NEGATIVE_INFINITY = Math.NEGATIVE_INFINITY;
+    public static var PI = Math.PI;
+    public static var E = Math.exp(1); // Euler's number
+    public static var PHI = (1 + Math.sqrt(5)) / 2; // Golden ratio
+    public static var GAMMA = 0.57721566490153286060; // Euler–Mascheroni constant
+    public static var EPSILON = 1e-10; // For floating-point tolerance comparisons
+    public static var NaN = Math.NaN;
+    public static var POSITIVE_INFINITY = Math.POSITIVE_INFINITY;
+    public static var NEGATIVE_INFINITY = Math.NEGATIVE_INFINITY;
 
-    public static inline var CMPLX_ZERO = new Complex(0, 0); // Represents the real number 0 in complex form.
-    public static inline var CMPLX_ONE = new Complex(1, 0); // Represents the real number 1 in complex form.
-    public static inline var CMPLX_I = new Complex(0, 1); // Represents the imaginary unit i, the complex square root of -1.
-    public static inline var CMPLX_INF = new Complex(POSITIVE_INFINITY, POSITIVE_INFINITY); // Represents infinity in complex form.
+    public static var CMPLX_ZERO = new Complex(0, 0); // Represents the real number 0 in complex form.
+    public static var CMPLX_ONE = new Complex(1, 0); // Represents the real number 1 in complex form.
+    public static var CMPLX_I = new Complex(0, 1); // Represents the imaginary unit i, the complex square root of -1.
+    public static var CMPLX_INF = new Complex(POSITIVE_INFINITY, POSITIVE_INFINITY); // Represents infinity in complex form.
 
     // --- DEG <-> RAD ---
     // Convert between degrees and radians.

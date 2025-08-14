@@ -17,7 +17,7 @@ based on stuff from `funkin.vis` + a little spite
 haxelib git bmath https://github.com/bobbydeluxe/bmath.git
 ```
 
-also slap this in your `project.xml`:
+also slap this in your `project.xml` [if ur using lime/openfl]:
 
 ``` xml
 <haxelib name="bmath" version="git" />

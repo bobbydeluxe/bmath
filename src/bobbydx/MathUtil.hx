@@ -23,19 +23,19 @@ class MathUtil
 {
     // --- CONSTANTS ---
     // Common mathematical constants.
-    public static var PI = Math.PI; // 3.14159...
-    public static var E = Math.exp(1); // Euler's number
-    public static var PHI = (1 + Math.sqrt(5)) / 2; // Golden ratio
-    public static var GAMMA = 0.57721566490153286060; // Euler–Mascheroni constant
-    public static var EPSILON = 1e-10; // For floating-point tolerance comparisons
-    public static var NaN = Math.NaN;
-    public static var POSITIVE_INFINITY = Math.POSITIVE_INFINITY;
-    public static var NEGATIVE_INFINITY = Math.NEGATIVE_INFINITY;
+    public static final PI = Math.PI; // 3.14159...
+    public static final E = Math.exp(1); // Euler's number
+    public static final PHI = (1 + Math.sqrt(5)) / 2; // Golden ratio
+    public static final GAMMA = 0.57721566490153286060; // Euler–Mascheroni constant
+    public static final EPSILON = 1e-10; // For floating-point tolerance comparisons
+    public static final NaN = Math.NaN;
+    public static final POSITIVE_INFINITY = Math.POSITIVE_INFINITY;
+    public static final NEGATIVE_INFINITY = Math.NEGATIVE_INFINITY;
 
-    public static var CMPLX_ZERO = new Complex(0, 0); // Represents the real number 0 in complex form.
-    public static var CMPLX_ONE = new Complex(1, 0); // Represents the real number 1 in complex form.
-    public static var CMPLX_I = new Complex(0, 1); // Represents the imaginary unit i, the complex square root of -1.
-    public static var CMPLX_INF = new Complex(POSITIVE_INFINITY, POSITIVE_INFINITY); // Represents infinity in complex form.
+    public static final CMPLX_ZERO = new Complex(0, 0); // Represents the real number 0 in complex form.
+    public static final CMPLX_ONE = new Complex(1, 0); // Represents the real number 1 in complex form.
+    public static final CMPLX_I = new Complex(0, 1); // Represents the imaginary unit i, the complex square root of -1.
+    public static final CMPLX_INF = new Complex(POSITIVE_INFINITY, POSITIVE_INFINITY); // Represents infinity in complex form.
 
     // --- DEG <-> RAD ---
     // Convert between degrees and radians.

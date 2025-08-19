@@ -23,7 +23,7 @@ class MathUtil
 {
     // --- CONSTANTS ---
     // Common mathematical constants.
-    public static var PI = Math.PI;
+    public static var PI = Math.PI; // 3.14159...
     public static var E = Math.exp(1); // Euler's number
     public static var PHI = (1 + Math.sqrt(5)) / 2; // Golden ratio
     public static var GAMMA = 0.57721566490153286060; // Euler–Mascheroni constant
@@ -83,13 +83,7 @@ class MathUtil
     // --- EXPONENTS & LOGS ---
     // Core exponentiation and logarithm functions.
     public static inline function pow(base:Float, exp:Float):Float return Math.pow(base, exp);
-    public static inline function log(value:Float, base:Float):Float return Math.log(value) / Math.log(base);
-
-    // Shortcut functions so I don't break compatibility with existing code.
-    public static inline function sqrt(value:Float):Float return pow(value, 0.5); // Square root
-    public static inline function cbrt(value:Float):Float return pow(value, 1/3); // Cube root
-    public static inline function exp(value:Float):Float return pow(E, value); // Exponential function e^x
-    public static inline function ln(value:Float):Float return log(value, E); // Natural logarithm
+    public static inline function log(value:Float, base:Float = 10):Float return Math.log(value) / Math.log(base);
 
 
     // --- BASIC FUNCTIONS ---
@@ -206,5 +200,65 @@ class MathUtil
     public static inline function lcm(a:Int, b:Int):Float {
         if (a == 0 || b == 0) return 0;
         return Math.abs(a * b) / gcd(a, b);
+    }
+
+    // --- SCIENTIFIC NOTATION ---
+
+    /**
+     * Converts a number to an array representing the scientific notation.
+     * Example: 1234567 -> [1.234567, 6]
+     */
+    public static inline function toScientificNotation(value:Float):Array<Float> {
+        if (value == 0) return [0, 0];
+        var exponent = Math.floor(log(Math.abs(value), 10));
+        var mantissa = value / pow(10, exponent);
+        return [mantissa, exponent];
+    }
+
+    /**
+     * Converts a number from scientific notation back to a float.
+     * Example: [1.234567, 6] -> 1234567
+     */
+    public static inline function fromScientificNotation(sci:Array<Float>):Float {
+        return sci[0] * pow(10, sci[1]);
+    }
+
+    /**
+     * Checks if the array is valid scientific notation.
+     * To return true instead of false, the absolute value of the first element must be between 1 (inclusive) and 10 (exclusive).
+     * Also the second element must be an integer.
+     * Example: [5, 5] -> true, [0.5, 6] -> false
+     */
+    public static inline function isValidScientificNotation(sci:Array<Float>):Bool {
+        return sci.length == 2 && abs(sci[0]) >= 1 && abs(sci[0]) < 10 && sci[1] == Math.floor(sci[1]);
+    }
+
+    // --- MISC ---
+
+    /*
+     * Remaps sum shit. Kinda like the game builder garage map nodon.
+     */
+    public static inline function remap(value:Float, fromMin:Float, fromMax:Float, toMin:Float, toMax:Float):Float {
+        return toMin + (value - fromMin) * (toMax - toMin) / (fromMax - fromMin);
+    }
+
+    /*
+     * Converts type Int to type Float. We have `Std.int` so why not have the inverse?
+     */
+    public static inline function intToFloat(value:Int):Float {
+        return value;
+    }
+
+    /*
+     * The F.O.I.L. method (First, Outside, Inside, Last)
+     * A technique for multiplying two binomials, represented as arrays.
+     */
+    public static inline function foil(a:Array<Float>, b:Array<Float>):Array<Float> {
+        if (a.length != 2 || b.length != 2) throw 'Invalid binomial representation';
+        return [
+            a[0] * b[0], // First
+            a[0] * b[1] + a[1] * b[0], // Outside + Inside
+            a[1] * b[1] // Last
+        ];
     }
 }

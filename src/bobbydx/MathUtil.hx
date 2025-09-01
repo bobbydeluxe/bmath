@@ -250,10 +250,14 @@ class MathUtil
     }
 
     /*
-     * the camera lerp function from fnf
+     * The coolLerp functions from Friday Night Funkin'
      */
     public static inline function cameraLerp(lerp:Float):Float {
         return lerp * (FlxG.elapsed / (1 / 60));
+    }
+
+	public static inline function coolLerp(start:Float, end:Float, t:Float):Float {
+        return start + (end - start) * cameraLerp(t);
     }
 
     /*

@@ -208,7 +208,7 @@ class MathUtil
      * Converts a number to an array representing the scientific notation.
      * Example: 1234567 -> [1.234567, 6]
      */
-    public static inline function toScientificNotation(value:Float):Array<Float> {
+    public static inline function toSciNotif(value:Float):Array<Float> { // tries to shorten notation but now its short for notification [my dumbass be like]
         if (value == 0) return [0, 0];
         var exponent = Math.floor(log(Math.abs(value), 10));
         var mantissa = value / pow(10, exponent);
@@ -219,7 +219,7 @@ class MathUtil
      * Converts a number from scientific notation back to a float.
      * Example: [1.234567, 6] -> 1234567
      */
-    public static inline function fromScientificNotation(sci:Array<Float>):Float {
+    public static inline function fromSciNotif(sci:Array<Float>):Float {
         return sci[0] * pow(10, sci[1]);
     }
 
@@ -229,7 +229,7 @@ class MathUtil
      * Also the second element must be an integer.
      * Example: [5, 5] -> true, [0.5, 6] -> false
      */
-    public static inline function isValidScientificNotation(sci:Array<Float>):Bool {
+    public static inline function isValidSciNotif(sci:Array<Float>):Bool {
         return sci.length == 2 && abs(sci[0]) >= 1 && abs(sci[0]) < 10 && sci[1] == Math.floor(sci[1]);
     }
 
@@ -250,6 +250,13 @@ class MathUtil
     }
 
     /*
+     * the camera lerp function from fnf
+     */
+    public static inline function cameraLerp(lerp:Float):Float {
+        return lerp * (FlxG.elapsed / (1 / 60));
+    }
+
+    /*
      * The F.O.I.L. method (First, Outside, Inside, Last)
      * A technique for multiplying two binomials, represented as arrays.
      */
@@ -260,5 +267,24 @@ class MathUtil
             a[0] * b[1] + a[1] * b[0], // Outside + Inside
             a[1] * b[1] // Last
         ];
+    }
+
+    /*
+     * Converts decimal (base 10) digits to their spelled string representation. In case you want to use them for XML names n shit
+     */
+    public static inline function digitToWord(digit:Int):String {
+        switch (digit) {
+            case 0: return "zero";
+            case 1: return "one";
+            case 2: return "two";
+            case 3: return "three";
+            case 4: return "four";
+            case 5: return "five";
+            case 6: return "six";
+            case 7: return "seven";
+            case 8: return "eight";
+            case 9: return "nine";
+            default: throw 'Input must be a single digit (0-9)';
+        }
     }
 }

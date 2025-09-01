@@ -9,7 +9,7 @@ includes stuff like:
 - factorials, gcd, lcm, logs, etc
 - constants like π, e, φ, i, and your mom
 
-based on stuff from `funkin.vis` + a little spite
+complex numbers based on stuff from `funkin.vis` (i love fridaynightfunkin ! !)
 
 ## install
 

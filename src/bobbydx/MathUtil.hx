@@ -1,6 +1,9 @@
 package bobbydx;
 
 import bobbydx.backend.Complex;
+#if flixel
+import flixel.FlxG;
+#end
 
 /**
  * A collection of consistent and modern mathematical utilities to fix or replace
@@ -253,7 +256,11 @@ class MathUtil
      * The coolLerp functions from Friday Night Funkin'
      */
     public static inline function cameraLerp(lerp:Float):Float {
+        #if flixel
         return lerp * (FlxG.elapsed / (1 / 60));
+        #else
+        return lerp;
+        #end
     }
 
 	public static inline function coolLerp(start:Float, end:Float, t:Float):Float {
